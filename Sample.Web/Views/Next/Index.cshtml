@@ -1,0 +1,28 @@
+﻿@model sample_app.Models.MyModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h1> Hello! This is the second page!</h1>
+
+        <p>Here is the secret the client sent us:</p>
+        <p>
+           Name: @Model.Name <br />
+           Age: @Model.Age<br />
+            Hobbies:
+            <ul>
+                @foreach (var s in Model.Hobbies)
+                {
+                    <li>@s</li>
+                }
+            </ul>
+        </p>
+    </div>
+</body>
+</html>

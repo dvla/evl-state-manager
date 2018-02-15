@@ -1,0 +1,26 @@
+﻿@model string
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1> Hello! This is the first page!</h1>
+
+        @using (Html.BeginForm("Index", "Next", FormMethod.Post))
+        {
+        <p>This field contains information from the server which was sent to the client to allow us to maintain state</p>
+        <p>The information is encrpyted using the machine key of the server. Any modifications to it will result in it becomming corrupt.</p>
+        <input type="text" value="@Model" name="viewState" style="width:50%;"  />   <p>(Normally this field would be hidden)</p>
+
+        <p>Try modifying it to see what would happen</p>
+        <p>Press next to go to the next page and decrypt this value.</p>
+        <input type="submit" value="Next" />
+        }
+    </div>
+</body>
+</html>
