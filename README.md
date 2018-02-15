@@ -6,7 +6,7 @@ A tool to provide state management for .NET MVC applications in a manner similar
 
 The tool uses .NET's [MachineKey API](https://msdn.microsoft.com/en-us/library/system.web.security.machinekey(v=vs.110).aspx) to perform it's Encode and Decode operations. If you use your application in a multi server envrionment, you'll need to ensure each server [shares the same MachineKey config](https://msdn.microsoft.com/en-us/library/ff649308.aspx#paght000007_webfarmdeploymentconsiderations).
 
-# Why we need it
+## Why we need it
 When user performs a [VES enquiry](https://vehicleenquiry.service.gov.uk), we ask them to confirm the vehicle details before presenting them with the full vehicle details. To reduce load on our back-end services, we perform this enquiry once, using this tool to maintain state between requests.
 
 ## How to use it
